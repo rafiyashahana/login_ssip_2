@@ -2,6 +2,7 @@
 
 :root {
   --max-width: 1200px;
+  --white: #ffffff;
 }
 
 * {
@@ -22,6 +23,19 @@ body {
   align-items: center;
   justify-content: center;
 }
-.form-box{
-    j
+.form-box {
+  width: 500px;
+  height: 600px;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 10px 60px;
+  gap: 50px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
