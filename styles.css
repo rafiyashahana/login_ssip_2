@@ -3,6 +3,9 @@
 :root {
   --max-width: 1200px;
   --white: #ffffff;
+  --grey: #808080;
+  --primary: #53a8b6;
+  --secondary: #79c2d0;
 }
 
 * {
@@ -15,27 +18,141 @@
 body {
   height: 100vh;
   width: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("./assets/images/pexels-rahul-pandit-2086748.jpg");
   background-size: cover;
   background-position: center;
+  color: var(--primary);
+  position: relative;
+}
+main {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.form-box {
+.sign-in .form-box,
+.sign-up .form-box {
   width: 500px;
   height: 600px;
   background-color: var(--white);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 10px 60px;
   gap: 50px;
+  padding: 40px 10px 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* display: none; */
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 12px;
+  width: 100%;
+}
+.input-group {
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.input-group input {
+  width: 100%;
+  outline: none;
+  padding: 14px 16px;
+  height: 48px;
+  border-radius: 7px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: var(--grey);
+}
+
+.input-group label {
+  order: -1;
+  padding-left: 16px;
+  transition: all 0.3s ease-in;
+  transform: translateY(33px);
+  pointer-events: none;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--grey);
+  display: inline-block;
+  width: fit-content;
+}
+
+input:focus + label,
+input:valid + label {
+  transform: translate(10px, 7px);
+  font-size: 13px;
+  padding-left: 0;
+}
+
+.input-group .tooltip-form {
+  background: #ff7777;
+  border-radius: 6px;
+  margin: auto;
+  max-width: 300px;
+  position: absolute;
+  top: calc(100% + 9px);
+  left: 0px;
+  right: 0px;
+  padding: 10px 15px;
+  z-index: 10;
+  box-shadow: 2px 2px 5px rgb(17 17 17 / 15%);
+  display: none;
+}
+
+.input-group .tooltip-form p {
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--white);
+  position: relative;
+  z-index: 4;
+}
+.input-group .tooltip-form::after {
+  content: "";
+  background: #ff7777;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: -4px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  transform: rotate(45deg);
+}
+.forgot-text {
+  margin: 0 20px;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.btn {
+  padding: 10px 25px;
+  border-radius: 7px;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 18px;
+  background: var(--primary);
+  transition: 0.3s ease;
+  cursor: pointer;
+  border: none;
+  height: 52px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: var(--secondary);
 }

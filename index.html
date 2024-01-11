@@ -8,32 +8,73 @@
   </head>
   <body>
     <main>
-      <div class="form-box">
-        <h1>Sign Up</h1>
-        <form>
-          <div class="input-group">
-            <input name="fname" type="text" id="fname" required />
-            <label for="fname">First Name</label>
-            <div class="tooltip-form">
-              <p>This field can't be empty. Please fill it in.</p>
+      <div class="sign-up">
+        <div class="form-box">
+          <h1>Sign Up</h1>
+          <form>
+            <div class="input-group">
+              <input name="fname" type="text" id="fname" required />
+              <label for="fname">Name</label>
+              <div class="tooltip-form">
+                <p>This field can't be empty. Please fill it in.</p>
+              </div>
             </div>
-          </div>
 
-          <div class="input-group">
-            <input name="email" type="text" id="email" required />
-            <label for="email">Business Email</label>
-            <div class="tooltip-form">
-              <p>This field can't be empty. Please fill it in.</p>
+            <div class="input-group">
+              <input name="email" type="text" id="email" required />
+              <label for="email"> Email</label>
+              <div class="tooltip-form">
+                <p>This field can't be empty. Please fill it in.</p>
+              </div>
+            </div>
+            <div class="input-group">
+              <input name="password" type="password" id="password" required />
+              <label for="password">Password</label>
+              <div class="tooltip-form">
+                <p>This field can't be empty. Please fill it in.</p>
+              </div>
+            </div>
+          </form>
+
+          <div class="btn-container">
+            <button class="btn">Sign Up</button>
+            <div class="forgot-text">
+              <p>Already have an account? <a href="">Sign In</a></p>
             </div>
           </div>
-          <div class="input-group">
-            <input name="company" type="text" id="company" required />
-            <label for="company">Company</label>
-            <div class="tooltip-form">
-              <p>This field can't be empty. Please fill it in.</p>
+        </div>
+      </div>
+
+      <div class="sign-in">
+        <div class="form-box">
+          <h1>Sign In</h1>
+          <form>
+            <div class="input-group">
+              <input name="email" type="text" id="email" required />
+              <label for="email"> Email</label>
+              <div class="tooltip-form">
+                <p>This field can't be empty. Please fill it in.</p>
+              </div>
+            </div>
+            <div class="input-group">
+              <input name="password" type="password" id="password" required />
+              <label for="password">Password</label>
+              <div class="tooltip-form">
+                <p>This field can't be empty. Please fill it in.</p>
+              </div>
+            </div>
+            <div class="forgot-text">
+              <p>Forgot password? <a href="">Click Here!</a></p>
+            </div>
+          </form>
+
+          <div class="btn-container">
+            <button class="btn">Sign Up</button>
+            <div class="forgot-text">
+              <p>Already have an account? <a href="">Sign In</a></p>
             </div>
           </div>
-        </form>
+        </div>
       </div>
     </main>
   </body>
