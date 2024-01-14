@@ -44,7 +44,12 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* display: none; */
+}
+.sign-in .form-box {
+  display: none;
+}
+.sign-up .form-box {
+  display: flex;
 }
 
 form {
@@ -89,51 +94,31 @@ input:valid + label {
   transform: translate(10px, 7px);
   font-size: 13px;
   padding-left: 0;
+  /* background-color: rgba(0, 0, 0, 0.1); */
 }
 
-.input-group .tooltip-form {
-  background: #ff7777;
-  border-radius: 6px;
+.error-msg {
   margin: auto;
   max-width: 300px;
   position: absolute;
-  top: calc(100% + 9px);
-  left: 0px;
-  right: 0px;
-  padding: 10px 15px;
-  z-index: 10;
-  box-shadow: 2px 2px 5px rgb(17 17 17 / 15%);
+  top: 70px;
+  left: 0;
+  font-size: 13px;
+  line-height: 16px;
+  color: #ff7777;
   display: none;
 }
 
-.input-group .tooltip-form p {
-  font-size: 13px;
-  line-height: 16px;
-  color: var(--white);
-  position: relative;
-  z-index: 4;
-}
-.input-group .tooltip-form::after {
-  content: "";
-  background: #ff7777;
-  width: 22px;
-  height: 22px;
-  position: absolute;
-  top: -4px;
-  left: 0px;
-  right: 0px;
-  margin: auto;
-  transform: rotate(45deg);
-}
 .forgot-text {
   margin: 0 20px;
 }
 
 .btn-container {
   display: flex;
+
   flex-direction: column;
   gap: 12px;
-  margin-top: 30px;
+  margin: 50px auto;
 }
 
 .btn {

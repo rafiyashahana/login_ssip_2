@@ -11,35 +11,41 @@
       <div class="sign-up">
         <div class="form-box">
           <h1>Sign Up</h1>
-          <form>
+          <form id="signUp-form">
             <div class="input-group">
-              <input name="fname" type="text" id="fname" required />
-              <label for="fname">Name</label>
-              <div class="tooltip-form">
-                <p>This field can't be empty. Please fill it in.</p>
-              </div>
+              <input name="Name" type="text" id="name-signup" required />
+              <label for="name-signup">Name</label>
+              <p class="error-msg">
+                This field can't be empty. Please fill it in.
+              </p>
             </div>
 
             <div class="input-group">
-              <input name="email" type="text" id="email" required />
-              <label for="email"> Email</label>
-              <div class="tooltip-form">
-                <p>This field can't be empty. Please fill it in.</p>
-              </div>
+              <input name="Email" type="text" id="email-signup" required />
+              <label for="email-signup"> Email</label>
+              <p class="error-msg">
+                This field can't be empty. Please fill it in.
+              </p>
             </div>
             <div class="input-group">
-              <input name="password" type="password" id="password" required />
-              <label for="password">Password</label>
-              <div class="tooltip-form">
-                <p>This field can't be empty. Please fill it in.</p>
-              </div>
+              <input
+                name="Password"
+                type="password"
+                id="password-signup"
+                required
+              />
+              <label for="password-signup">Password</label>
+              <p class="error-msg">
+                This field can't be empty. Please fill it in.
+              </p>
             </div>
           </form>
-
           <div class="btn-container">
-            <button class="btn">Sign Up</button>
+            <button class="btn" id="sign-up-btn">Sign Up</button>
             <div class="forgot-text">
-              <p>Already have an account? <a href="">Sign In</a></p>
+              <p>
+                Already have an account? <a id="signIn-link" href="">Sign In</a>
+              </p>
             </div>
           </div>
         </div>
@@ -50,15 +56,25 @@
           <h1>Sign In</h1>
           <form>
             <div class="input-group">
-              <input name="email" type="text" id="email" required />
-              <label for="email"> Email</label>
+              <input
+                name="email-signin"
+                type="text"
+                id="email-signin"
+                required
+              />
+              <label for="email-signin"> Email</label>
               <div class="tooltip-form">
                 <p>This field can't be empty. Please fill it in.</p>
               </div>
             </div>
             <div class="input-group">
-              <input name="password" type="password" id="password" required />
-              <label for="password">Password</label>
+              <input
+                name="password-signin"
+                type="password"
+                id="password-signin"
+                required
+              />
+              <label for="password-signin">Password</label>
               <div class="tooltip-form">
                 <p>This field can't be empty. Please fill it in.</p>
               </div>
@@ -77,5 +93,6 @@
         </div>
       </div>
     </main>
+    <script src="./index.js"></script>
   </body>
 </html>
