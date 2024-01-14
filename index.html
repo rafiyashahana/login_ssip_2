@@ -9,7 +9,7 @@
   <body>
     <main>
       <div class="sign-up">
-        <div class="form-box">
+        <div class="form-box-signUp">
           <h1>Sign Up</h1>
           <form id="signUp-form">
             <div class="input-group">
@@ -52,7 +52,7 @@
       </div>
 
       <div class="sign-in">
-        <div class="form-box">
+        <div class="form-box-signIn">
           <h1>Sign In</h1>
           <form>
             <div class="input-group">
@@ -63,9 +63,9 @@
                 required
               />
               <label for="email-signin"> Email</label>
-              <div class="tooltip-form">
-                <p>This field can't be empty. Please fill it in.</p>
-              </div>
+              <p class="error-msg">
+                This field can't be empty. Please fill it in.
+              </p>
             </div>
             <div class="input-group">
               <input
@@ -75,9 +75,9 @@
                 required
               />
               <label for="password-signin">Password</label>
-              <div class="tooltip-form">
-                <p>This field can't be empty. Please fill it in.</p>
-              </div>
+              <p class="error-msg">
+                This field can't be empty. Please fill it in.
+              </p>
             </div>
             <div class="forgot-text">
               <p>Forgot password? <a href="">Click Here!</a></p>
@@ -87,7 +87,7 @@
           <div class="btn-container">
             <button class="btn">Sign Up</button>
             <div class="forgot-text">
-              <p>Already have an account? <a href="">Sign In</a></p>
+              <p>No account? <a id="signUp-link" href="">Sign Up</a></p>
             </div>
           </div>
         </div>

@@ -30,8 +30,8 @@ main {
   align-items: center;
   justify-content: center;
 }
-.sign-in .form-box,
-.sign-up .form-box {
+.form-box-signIn,
+.form-box-signUp {
   width: 500px;
   height: 600px;
   background-color: var(--white);
@@ -44,12 +44,10 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-.sign-in .form-box {
-  display: none;
-}
-.sign-up .form-box {
   display: flex;
+}
+.form-box-signIn {
+  display: none;
 }
 
 form {

@@ -1,6 +1,9 @@
 const signUpForm = document.querySelector("#signUp-form");
 const signUpBtn = document.querySelector("#sign-up-btn");
 const errorMsg = document.querySelector(".error-msg");
+const signInLink = document.querySelector("#signIn-link");
+const signUpLink = document.querySelector("#signUp-link");
+const signInBox = document.querySelector(".form-box-signIn");
 const requiredFields = signUpForm.querySelectorAll("[required]");
 
 signUpBtn.addEventListener("click", (e) => {
@@ -23,4 +26,14 @@ signUpBtn.addEventListener("click", (e) => {
       alert("Sign up successful");
     }
   });
+});
+
+signInLink.addEventListener("click", (e) => {
+  e.preventDefault();
+  signInBox.style.display = "flex";
+});
+
+signUpLink.addEventListener("click", (e) => {
+  e.preventDefault();
+  signInBox.style.display = "none";
 });
