@@ -13,7 +13,7 @@
           <h1>Sign Up</h1>
           <form id="signUp-form">
             <div class="input-group">
-              <input name="Name" type="text" id="name-signup" required />
+              <input name="name" type="text" id="name-signup" required />
               <label for="name-signup">Username</label>
               <p class="error-msg">
                 This field can't be empty. Please fill it in.
@@ -21,7 +21,7 @@
             </div>
 
             <div class="input-group">
-              <input name="Email" type="text" id="email-signup" required />
+              <input name="email" type="text" id="email-signup" required />
               <label for="email-signup"> Email</label>
               <p class="error-msg">
                 This field can't be empty. Please fill it in.
@@ -29,7 +29,7 @@
             </div>
             <div class="input-group">
               <input
-                name="Password"
+                name="password"
                 type="password"
                 id="password-signup"
                 required
@@ -43,10 +43,10 @@
               <input
                 name="Password"
                 type="password"
-                id="password-signup"
+                id="cpassword-signup"
                 required
               />
-              <label for="password-signup">Confirm Password</label>
+              <label for="cpassword-signup">Confirm Password</label>
               <p class="error-msg">
                 This field can't be empty. Please fill it in.
               </p>
@@ -101,5 +101,6 @@
       </div>
     </main>
     <script src="./index.js"></script>
+    <script src="./sign-up.js"></script>
   </body>
 </html>
