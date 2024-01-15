@@ -14,7 +14,7 @@
           <form id="signUp-form">
             <div class="input-group">
               <input name="Name" type="text" id="name-signup" required />
-              <label for="name-signup">Name</label>
+              <label for="name-signup">Username</label>
               <p class="error-msg">
                 This field can't be empty. Please fill it in.
               </p>
@@ -39,6 +39,18 @@
                 This field can't be empty. Please fill it in.
               </p>
             </div>
+            <div class="input-group">
+              <input
+                name="Password"
+                type="password"
+                id="password-signup"
+                required
+              />
+              <label for="password-signup">Confirm Password</label>
+              <p class="error-msg">
+                This field can't be empty. Please fill it in.
+              </p>
+            </div>
           </form>
           <div class="btn-container">
             <button class="btn" id="sign-up-btn">Sign Up</button>
@@ -56,12 +68,7 @@
           <h1>Sign In</h1>
           <form>
             <div class="input-group">
-              <input
-                name="email-signin"
-                type="text"
-                id="email-signin"
-                required
-              />
+              <input name="email" type="text" id="email-signin" required />
               <label for="email-signin"> Email</label>
               <p class="error-msg">
                 This field can't be empty. Please fill it in.
@@ -69,7 +76,7 @@
             </div>
             <div class="input-group">
               <input
-                name="password-signin"
+                name="password"
                 type="password"
                 id="password-signin"
                 required
@@ -85,7 +92,7 @@
           </form>
 
           <div class="btn-container">
-            <button class="btn">Sign Up</button>
+            <button class="btn" id="signIn-btn">Sign In</button>
             <div class="forgot-text">
               <p>No account? <a id="signUp-link" href="">Sign Up</a></p>
             </div>
