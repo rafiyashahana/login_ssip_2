@@ -5,6 +5,18 @@ const cpass = document.querySelector("#cpassword-signup");
 const signUpBtn = document.querySelector("#sign-up-btn");
 const errorMsg = document.querySelectorAll(".error-msg");
 const input = document.querySelectorAll("input");
+const signUpForm = document.querySelector("#signUp-form");
+
+const addUserData = () => {
+  let user = {
+    userName: username.value,
+    email: email.value,
+    password: cpass.value,
+  };
+  let userData = JSON.parse(localStorage.getItem("user")) || [];
+  userData.push(user);
+  localStorage.setItem("user", JSON.stringify(userData));
+};
 
 signUpBtn.addEventListener("click", (e) => {
   e.preventDefault();
@@ -26,7 +38,6 @@ const validateUser = () => {
     return;
   } else {
     showSuccess(0);
-    localStorage.setItem("username", username.value);
   }
 };
 const validateEmail = () => {
@@ -40,7 +51,6 @@ const validateEmail = () => {
     return;
   } else {
     showSuccess(1);
-    localStorage.setItem("email", email.value);
   }
 };
 
@@ -66,10 +76,12 @@ const confirmPass = () => {
   } else {
     showSuccess(3);
     showSuccess(2);
-    localStorage.setItem("password", cpass.value);
+    addUserData();
   }
   setTimeout(() => {
     alert("Sign Up Successful");
+    input.forEach((item) => (item.style.border = "none"));
+    signUpForm.reset();
   }, 1000);
 };
 const showError = (i, msg) => {
