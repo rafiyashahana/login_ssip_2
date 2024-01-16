@@ -5,12 +5,9 @@ const signInBox = document.querySelector(".form-box-signIn");
 signInLink.addEventListener("click", (e) => {
   e.preventDefault();
   signInBox.style.display = "flex";
-  refreshPage();
+  window.location.href = window.location.href;
 });
 signUpLink.addEventListener("click", (e) => {
   e.preventDefault();
   signInBox.style.display = "none";
 });
-function refreshPage() {
-  window.location.reload();
-}
