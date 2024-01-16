@@ -62,19 +62,14 @@
           <h1>Sign In</h1>
           <form>
             <div class="input-group">
-              <input name="email" type="text" id="email-signin" required />
-              <label for="email-signin"> Email</label>
+              <input type="text" id="email-signin" required />
+              <label for="email-signin">Email</label>
               <p class="error-msg">
                 This field can't be empty. Please fill it in.
               </p>
             </div>
             <div class="input-group">
-              <input
-                name="password"
-                type="password"
-                id="password-signin"
-                required
-              />
+              <input type="password" id="password-signin" required />
               <label for="password-signin">Password</label>
               <p class="error-msg">
                 This field can't be empty. Please fill it in.
@@ -95,6 +90,7 @@
       </div>
     </main>
     <script src="./index.js"></script>
-    <script src="./sign-up.js"></script>
+    <script type="module" src="./sign-up.js"></script>
+    <script type="module" src="./sign-in.js"></script>
   </body>
 </html>

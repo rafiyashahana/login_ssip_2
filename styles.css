@@ -48,7 +48,7 @@ main {
   display: flex;
 }
 .form-box-signIn {
-  display: none;
+  /* display: none; */
 }
 
 form {
@@ -109,7 +109,7 @@ input:valid + label {
 }
 
 .forgot-text {
-  margin: 0 20px;
+  margin: 13px 20px;
 }
 
 .btn-container {

@@ -3,9 +3,9 @@ const email = document.querySelector("#email-signup");
 const pass = document.querySelector("#password-signup");
 const cpass = document.querySelector("#cpassword-signup");
 const signUpBtn = document.querySelector("#sign-up-btn");
-const errorMsg = document.querySelectorAll(".error-msg");
-const input = document.querySelectorAll("input");
 const signUpForm = document.querySelector("#signUp-form");
+export const errorMsg = document.querySelectorAll(".error-msg");
+export const input = document.querySelectorAll("input");
 
 const addUserData = () => {
   let user = {
@@ -84,12 +84,12 @@ const confirmPass = () => {
     signUpForm.reset();
   }, 1000);
 };
-const showError = (i, msg) => {
+export const showError = (i, msg) => {
   errorMsg[i].style.display = "block";
   errorMsg[i].innerHTML = msg;
   input[i].style.border = " solid #ff7777";
 };
-const showSuccess = (i) => {
+export const showSuccess = (i) => {
   errorMsg[i].style.display = "none";
   input[i].style.border = " solid #71BC78";
 };
