@@ -12,20 +12,22 @@ signInBtn.addEventListener("click", () => {
     let usersArr = JSON.parse(localStorage.getItem("user"));
     console.log(usersArr);
 
-    const emailArr = usersArr
-      .map((user) => user.email)
-      .includes(loginEmail.value);
-    console.log(emailArr);
-    const PassArr = usersArr
-      .map((user) => user.password)
-      .includes(loginPass.value);
-    console.log(PassArr);
-
-    if (emailArr && PassArr) {
-      showSuccess(4);
-      showSuccess(5);
-    } else {
-      showError(4, "Invalid email/ password");
+    let userFound = false;
+    usersArr.map((user) => {
+      if (
+        user.email === loginEmail.value &&
+        user.password === loginPass.value
+      ) {
+        userFound = true;
+        showSuccess(4);
+        showSuccess(5);
+        setTimeout(() => {
+          alert(`Sign in Successful. Welcome ${user.userName.toUpperCase()}!`);
+        }, 1000);
+      }
+    });
+    if (!userFound) {
+      showError(4, "Invalid email or password");
       showError(5, "");
     }
   }
